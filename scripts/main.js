@@ -31,7 +31,7 @@ const main = async () => {
     const retroarch = await createRetroarch({
       canvas: document.getElementById("canvas"),
       //coreUrl: `https://cdn.jsdelivr.net/gh/dimitrikarpov/retroarch-js/packages/retroarch-core/cores/${core}.js`,
-      coreUrl: `http://localhost/demo-retroarch-core-js/scripts/retroarch-core/cores/${core}.js`,
+      coreUrl: `https://jeffabner.github.io/retroarch-core-js/scripts/retroarch-core/cores/${core}.js`,
       romBinary: rom,
       beforeLoad: () => {
       //  log("🎬🎬🎬 Starting to load core 🎬🎬🎬")
