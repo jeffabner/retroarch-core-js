@@ -30,19 +30,24 @@ const main = async () => {
 
     const retroarch = await createRetroarch({
       canvas: document.getElementById("canvas"),
-      coreUrl: `https://cdn.jsdelivr.net/gh/dimitrikarpov/retroarch-js/packages/retroarch-core/cores/${core}.js`,
+      //coreUrl: `https://cdn.jsdelivr.net/gh/dimitrikarpov/retroarch-js/packages/retroarch-core/cores/${core}.js`,
+      coreUrl: `http://localhost/demo-retroarch-core-js/scripts/retroarch-core/cores/${core}.js`,
       romBinary: rom,
       beforeLoad: () => {
       //  log("🎬🎬🎬 Starting to load core 🎬🎬🎬")
+      console.log("🎬🎬🎬 Starting to load core 🎬🎬🎬");
       },
       onReady: () => {
         //log("🏋️🏋️🏋️ Core loaded and we ready to start 🏋️🏋️🏋️")
+        console.log("🏋️🏋️🏋️ Core loaded and we ready to start 🏋️🏋️🏋️");
       },
       onStart: () => {
        // log("🚀🚀🚀 ROM started 🚀🚀🚀")
+       console.log("🚀🚀🚀 ROM started 🚀🚀🚀");
       },
       onDestroy: () => {
       //  log("💀💀💀 Core destroyed succefully 💀💀💀")
+      console.log("💀💀💀 Core destroyed succefully 💀💀💀");
       },
     })
 
